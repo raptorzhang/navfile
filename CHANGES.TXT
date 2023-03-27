@@ -1,0 +1,255 @@
+OFFICIAL Version 4.1
+currently: v4.12.30
+dated: 27-02-2018
+maintained by: Paul Wratt
+-----------------------------------------
+ » tested 100% with php5-cgi FastCGI on thttpd & Apache
+ » added .tgz .tar.gz .gz and .tar extraction
+ » fixed PHP Warnings
+ » fixed PHP Strict Warnings
+ » fixed PHP inline failure on some servers (old <? to <?php )
+ » fixed files: charset=iso-8859-1 => charset=utf-8 (some servers wont recognize them)
+ » fixed Upload '$max_size' output
+ » changed deprecated 'eregi' to 'stripos'
+ » added 'info.php' that can be placed in the webserver root, in place of full "phpinfo.php" or 'server.php'
+ » added 'sans-serif' to 'Tahoma' fonts in skin index.html files
+ » added missing skin index.html to 'windowsxp' 
+ » added known workaround for Basic Authentcation with Appache & php5-cgi FastCGI (needs .htaccess rewrite rule)
+ » updated WindowsAlt proto-type
+ » updated WindowsXP proto-type
+ » updated Details proto-type
+ » updated DevPaint/ataripainter.php?dir=path&file=favicon.png
+ » added fix for XSS bug in browsers after saving a file
+ » re-added missing v4.12.23 fix
+ » known bug on some servers: $path_type='root' gives 'real' (needs reworking, again)
+
+Version v4.12.25
+-----------------------------------------
+ (lost: unknown)
+
+Version v4.12.23
+-----------------------------------------
+ » fixed AtariST proto-type, desktop window drag in Chrome/Safari
+
+Version v4.12.22
+-----------------------------------------
+ (lost: unknown)
+
+Version v4.12.21
+-----------------------------------------
+ (lost: from demo server: maybe 'restrict_to_home' related)
+
+Version v4.12.20
+-----------------------------------------
+ » fixed tooltip output for folders (remove . and ..)
+ » fixed file operations when 'restrict_to_home' is true
+ » updated WindowsAlt proto-type
+ » added preview.php (only used in demo atm)
+ » fixed path when using 'go' (address bar)
+ » fixed path when 'restrict_to_home' is true
+ » fixed code editor for Chrome & Safari
+ » changed browser check for AJAX
+ » changed skin setting
+
+Version v4.12.19
+-----------------------------------------
+ » fixed - minor code cleanup
+ » added skin css override (./inc/skin.css)
+   (used to develop new css, path compatible with Official PHP Navigator)
+ » changed config path defaults
+ » added view_charset (best is UTF-8, see: config)
+ » fixed security hole when $allow_uploads=false
+
+Version v4.12.18
+-----------------------------------------
+ » added wget (remote file url to current dir)
+ » fixed README.TXT encoding (when using PHP Navigator)
+
+Version v4.12.17
+-----------------------------------------
+ » added fix for bad linux mono-spaced fonts in Atari proto-type
+ » fixed JS error in Atari proto-type (see 'File' ref below)
+
+Version v4.12.16
+-----------------------------------------
+ » changed edit & save to UTF8
+ » added templates into "New File" (see: ./newfiles/*.*)
+ » added Mouse Wheel Scrolling support to Atari proto-type
+ » added BZip2 compression encoding support (some linux browsers support it for last 12 months)
+
+Version v4.12.15
+-----------------------------------------
+ » fixed problem with authentication and compression when server automatically adds some html footer types
+ » NOTICE: many features have been added to latest Official PHP Navigator v4.40 by Cyril
+ » added patch output for servers that add extra data to webserver output
+
+Version v4.12.14
+-----------------------------------------
+ » fixed upload for Atari Skin
+ » updated Atari Skin for Chrome JS error, should fix some other browsers too
+ » previous Mozilla update fixes IE7 & IE8 bugs also
+
+Version v4.12.13
+-----------------------------------------
+ » updated Atari Skin for Mozilla rv:1.9 (FireFox3) (NOTE: DO NOT USE 'File' in the beginning of an (dom) object name/id)
+ » fixed minor issues
+
+Version v4.12.12
+-----------------------------------------
+ » added DevPaint (ataripainter.php) prototype
+ » fixed 'browse Here' in  WindowsAlt
+ » updated Firefox patches for Iceweasel (freeware Mozilla FF - Debian since Etch (v4)) 
+ » updated Firefox patches for BonEcho (freeware Mozilla FF - Damn Small Linux 4.4.8)
+ » cleaned up 'invisible' errors (mostly css in Mozilla)
+ » standardized code across JS & PHP, functions, pages & includes
+ » fixed C:\dir\path translation in address bar (all pathes are now passed as '/')
+ » fixed DevEdit for new (moved) functions
+ » fixed new left panel folder option links
+ » fixed 'download' for Atari ST skin
+ » changed 'favicon' for Atari ST skin
+ » patched in 'View in Browser' from Atari ST skin
+ » can now set default 'startpage' module in config
+
+Version v4.12.11
+-----------------------------------------
+ » updated compression methods (none/deflate/gzip)
+ » updated WindowsAlt proto-type skin
+ » fixed IE bugs
+ » updated for IE7
+ » updated for Safari & OSX
+ » added 'DevEdit' proto-type external editor
+ » extended Atari ST module (explorer & editor)
+ » updated for Windows without proper Terminal font
+ » NOTE: pre-WinXPSP3: Terminal (builtin); WinXPSP3, FF: MS Gothic (TTF); Linux, OSX: Andale Mono (TTF);
+
+Version v4.12.10
+-----------------------------------------
+ » modified javascript include files
+ » added 'atari' skin (Atari ST)
+ » added 'atari.php' proto-type module (explorer & editor)
+ » added 'windowsalt.php' proto-type explorer 'skin'
+ » added 'windowsxp.php' proto-type explorer 'skin'
+
+Version v4.12.9
+------------------------
+ » added favicon for 'search' 
+ » added new 'search' dialog
+ » fixed saving '\?' in both external editors
+ » PNG fix for IE =< v6 (by CSS)
+ » fixed minor bugs
+
+Version v4.12.8
+------------------------
+ » supply both 'lite' & 'full' (lite only has Holocross & Nuvola-details skins)
+ » add 'favicon' support
+ » changed 'tooltip' timeout to clickable
+ » added 'nuvola-details' skin
+ » changed 'Configure PHP Navigator' to more flexible skins
+ » fixed 'search' to work with details and skins
+ » added 'View as Details' to 'File and Folder Tasks'
+ » added 'glassplate' full skin
+ » add favourites (needs permissions 660,666 or 770,777)
+ » fixed some skin (image) related issues
+ » Linux'd (Konqueror, Oprea 9.2, Firefox 2)
+
+Version v4.12.7
+------------------------
+ » fixed some unseen bugs
+ » added 'holocross' file icon skin
+ » changed simple skinning functionality
+ » added search() function
+ » added quick key for 'Edit Code [Shift+Ctrl+S]'
+ » added 'code_editor' color coded source file editor to 'File and Folder Tasks'
+ » changed 'settings.html' to 'settings.php' to dynamically configure
+ » added 'Download as Zip' to 'Configure Settings'
+ » added 'Skin' selection to 'Configure Settings'
+ » added 'size' to 'arrange by'
+ » added 'arrange by' to tool bar
+ » fixed file name alignments in IE
+ » added skinning (ie ./inc/42.css & ./images/42/*.gif)
+ » added 'About' to 'User Info'
+ » added 'Quick Help' to 'User Info'
+ » added 'Explore from Here' to 'File and Folder Tasks'
+ » added ' &+' type handling or filenames and folders
+ » added .bmp thumbnail generator
+ » added images 'tooltip'
+ » changed 'tooltip' box to bottom right corner
+ » changed 'tooltip' box dynamically scroll (on screen size changes)
+ » changed default permissions for 'new file' and 'new folder'
+ » fixed permissions
+ » added throw to 'roFileWalker' if login fails (if it is installed)
+ » changed defaults in config
+ » changed cookie setting in index (includes presets for roFileWalker)
+ » changed cookie getting
+ » added cookie reset in 'Configure Settings' as 'Defaults'
+ » changed 'copy' command to do recursive folder copy
+ » fixed 'delete' command giving wrong message on folder delete
+ » added relative paths to 'copy' command
+ » added 'word_wrap' to config for source editor
+ » added dynamic address bar width
+ » fixed 'go' button layout
+ » added 'Back'/'cancel' button/link to source editor
+ » added dynamic width & height to source editor for better use of screen 
+   real estate (including inset 'Save' button)
+ » added CSS/STYLE for source editor
+ » changed 'Home' button in icon bar
+ » changed 'Up' button in icon bar
+ » added 'Refresh' button to icon bar
+ » fixed layout of 'permissions dropdown' in icon bar
+ » added more options to 'permissions dropdown' (& changed order of new ones)
+ » changed lower icon bar to be more "palettable" to look at
+ » added 'set permissions' back into lower icon bar.
+ » added 'unzip' back into lower icon bar
+ » fixed 'zip' of empty folders
+ » added 'force_zip' for downloads
+ » fixed mouseover anomalies (bogus cursor changes)
+ » changed default cursor for buttons
+ » fixed buttons for IE (NONE of the mouse overs worked)
+ » fixed text and icon alignments in 'explorer' area
+ » fixed menu layout of image & href in 'File and Folder tasks'
+ » added Console recognition to 'File and Folder tasks'
+ » added Database recognition to 'File and Folder tasks'
+ » added FileWalker recognition to 'File and Folder tasks'
+ » added ControlPanel recognition to 'File and Folder tasks'
+ » added Administrator recognition to 'File and Folder tasks'
+ » added 'about' popup to 'User Info'
+ » cleaned up CSS
+
+Version 4.0
+------------------------
+ » New tool tips 'info' and 'error'
+ » A bug fix on chmod
+ » Small changes in behaviour of non-editable files, html files etc.
+ » A bug fix on 'download folder as zip' (of empty folders)
+ » A bug fix on filenames with quotes.
+
+Version 3.21
+------------------------
+ » New clean & tidy thumbnails.
+ » Customized context menu for zip,html,image files.
+
+Version 3.2
+------------------------
+ » Keyboard shortcuts for file manipulation.
+ » New gzip deflate encoding gives you rocket speed data transfer!
+   (In a test case a 120 KB page was compressed to 8 KB!)
+ » Context menu (Supported Browsers only)
+ » OEdit integration (Supported Browsers only), which is a wonderful WYSIWYG
+   (visual) html editor.
+ » New configure dialog.
+ » A big security hole and some minor bugs fixed!
+
+
+Updates
+------------------------
+Updates of Version 4.12 are available at:
+http://sourceforge.net/projects/navphp/files/
+http://phpnav.isource.net.nz/
+
+keep an eye on the official PHP Navigator homepage:
+http://navphp.sourceforge.net/
+
+Also there is a readonly version of PHP Navigator called roFileWalker
+It is designed to accompany PHP Navigator, FileWalker, & 
+SuperConsoleDatabaseFtpAdminFileAudaicous in the same folder, or seperately.
+http://www.isource.net.nz/download.php?roFileWalker.zip

@@ -1,0 +1,206 @@
+===============================
+#  PHP Navigator 4.12.11
+#  dated: 13-11-2007
+#  edited: 01-09-2008
+#  Coded by: Paul Wratt,
+#  Melbourne,Australia
+#  web: phpnav.isource.net.nz
+#  alt: isource.net.nz/phpnav
+===============================
+
+Create Skin
+-----------
+ To create a skin, create a folder inside the "skins" directory. For each image in the images 
+directory, create a new one. In the interface, if an image is missing, the default one will be 
+used. If you are adding or removing file icons, you need to place "skin.php" file in the same 
+directory. Also, if you are changing interface, text, or button values, place a "skin.css" file in 
+the same folder, in the "./skins/" directory.
+ ie. see skin.css in "./skins/windowsgreen/"
+ ie. see skin.php in "./skins/glassplate/"
+
+Version Compatibility
+---------------------
+ To keep the current versions compatible, and allow for expansion through development, 
+v4.12 uses ONE 'skin.php' for icons and a 'skin.css' for modified colors. v5 uses a different 
+set of skin configurations, due to having advanced skinning, however this allows one skin to 
+function correctly in either version. Why the need for TWO different skin systems, mostly 
+because v5 is still in development, and v4.12 is NON-MULTI-USER, and therefore is easier to 
+prototype new functions. v5 skins are modular and currently can consist of 'groups.php', 
+'layout.php', 'panel.php', 'context.php', 'skin.css', 'skin.js'. See the Skinning page at 
+http://iSource.net.nz/phpnav/ for an up to date description of v5 skins.
+
+Future Proof
+------------
+ Skinning is "intermediate" at the moment (flexible but simple), however v4.32 may include 
+more icons than any previous versions, and this is set to expand in the following 
+way:
+1) create an icon image for every file extension you want (.mpg, .java, .htaccess, etc)
+2) create icon images for the defaults sets (image, code, media, special, archive, db, www, etc)
+3) create icon images for the editors (edithtml, editcode, asdetails, asicons, browsehere)
+4) create a php file called "skin.php", listing "groups" or extensions (see ./skins/42/skin.php or "glassplate")
+5) create a "index.html" in the same folder, placing any details about your skin in it (see ./skins/42/)
+6) create an 800x600 screenshot in the same folder, called screenshot.png
+
+NOTES: (1) already supported in v4.2 (and v5)
+       (2) groups are already supported in v4.2, but as yet undefined (is in v5)
+       (3) already supported in v4.12, not yet in v4.2 (is in v5)
+       (4) to allow future support for advanced skinning (co-exist with v5)
+       (5) in case there is ever a descent "skin chooser" (in v5)
+       (6) for when there is a descent "skin chooser" (and for "Explore Here")
+
+Sharing Skins
+-------------
+ A skins directory will be made available at:
+  http://phpnav.iSource.net.nz/ or, alternately
+  http://iSource.net.nz/phpnav/
+This way your skins can also be kept upto date (ie the PHP & INDEX.HTML)
+
+File Extensions
+---------------
+ If you want to know what an extension is, or its grouping, visit:
+http://www.webopedia.com/quick_ref/fileextensionsp.asp  or  http://filext.com/
+ The following may also be considered "groups":
+
+special: of groups: unknown, security, crc
+exec: of groups: commands, programs
+code: of groups: source, html, html objects, java, includes, templates, web server, database
+media: of groups: audio, video, playlists
+richtext: docs, languages, help
+
+NOTE: some extensions are part of 2 or more groups. Some extention are rather "esoteric" (see text:).
+      The following is a guideline only. (see Skinning at http://iSource.net.nz/phpnav/ for details)
+
+unknown:
+as - bb - bb0 - mdu - p - shn - dcr - po - mo - gr1 - aiml - plsc - sc - crt - sis - sfg - rdf - sc0 - jbf - 
+wsz - ged - mgc - fcgi - lbi - xmb - afp - rlog - scs - kml - kmz - lpk - xspf - wss - rb - pem - tps - alz - scm - 
+scx - stm - hl - pgn - dmg - abl - gtp - gp3 - gp4 - gp5 - prf - mgl - mgx - rcm - part - snp - grz - pws - avs - 
+dwt - btr - gbs - w4m - amr - d - ml - mli - mly - xcf - xsd - emz - shp - dbf - mtl - opml - ips - 
+bab - sbx - swi - ctp - pgt - ebp - swc - spr - flp - pat - grd - ctm - cts - bin - ivu - grf - gpf - mbs - 
+apw - plt - sub - cir - ckt - kar - ds - tig - pls - dhp - jad - cst - cct - es - jap - prd - rds - rls - mis - 
+srd - lin - fre - win - dar - cs - eot - 
+
+misc:
+bak - dat - data - dta - tmp - new - psf - minipsf - psf2 - usr - hst - xul - ans - fun - rss - wsf - 
+profile - engine - vsd - svg - banned - control - master - totals - ttl - user - tsk - sbn - spec - 
+lastmod - pageindex - auto-replace - homepage - recentchanges - resx - sln - version - ser - htc - 
+allrecentchanges - blocklist-chongqed - blocklist-moinmaster - sidebar - sitemap - intel - mwdeck - 
+application - admin - sample - svnignore - pmwiki - set - rating - magic - 
+
+text:
+txt - cat - csv - def - diff - dir - dist - in - list - lst - 
+dependency - module - theme - types - schema - style - wings - blend - 
+
+info:
+diz - inf - info - ini - log - nfo - 
+
+setup:
+conf - cfg - cnf - install - prop - properties - settings - params - vars - 
+
+help:
+chm - help - helporder - hlp - manual - 
+
+source:
+asc - asm - c - dotproject - gb - gba - gbc - obj - pas - project - scp - src - vb - vbproj - 
+
+commands:
+autopackage - bat - command - rpm - run - sh - shx - reg - 
+
+programs:
+com - dll - dtd - exe - msi - so - 
+
+html:
+htm - html - mht - ihtml - phtml - rhtml - shtm - shtml - wml - xhtml - yml -
+
+html objects:
+css - js - swf - xml - xsl - xslt - 
+
+java:
+class - java - jar - jhtml - jso - jsp - 
+
+web server:
+asa - asp - aspx - cgi - p3p - php - php3 - phps - phpx - php~ - pl - pm - py - 
+
+includes:
+inc - inc.php - lasso - lib - lib.php - php.new - ssi - 
+
+templates:
+php-dist - php-template - template - thtml - thtmlx - tmpl - tpl - pstpl - tpls - 
+
+db:
+db - dbt - dtb - fdb - mdb - mysql - pgsql - sql - table - tbl - 
+
+security:
+flock - htaccess - htpasswd - lck - lock - spc - nfs - 
+
+crc:
+cer - cd4 - cdr - crc - cvsignore - md5 - 
+
+archive:
+7z - 7zip - ace - ctg.z - ctg - jar - gz - rgz - sit - tar - tar.bz2 - tar.gz - tgz - zip - z - 
+
+game:
+3ds - aemod - bsp - fog - map - max - mdl - mod - pak - pk3 - sav - wad - xd - 
+
+messages:
+ims - imstore - msg - outbox - attach - idx - 
+
+docs:
+doc - docx - eps - ppt - pdd - pdf - pot - pps - psd - psp - rtf - tex - wmf - wpd - wpp - xls - xlsm - 
+
+fonts:
+ttf - fon - gdf - 
+
+images:
+ani - bmp - djvu - cur - ico - gif - gif2 - jp2 - jpe - jpeg - jpg - pcd - png - png0 - png32 - 
+tif - tiff - raw - tga - xpi - 
+
+audio:
+3gp - aac - aif - au - au3 - mid - midi - ogg - wav - 
+
+video:
+afm - asf - asx - fla - flac - flv - mp2 - mp4 - mpeg - mpg - rm - qt - 
+
+playlist:
+m3u - ram - m4a - m4v - 
+
+language:
+abr - dic - dict - lang - lng - semaphore.ref - semaphore - ref - 
+
+Some currently known file extensions are (mostly for Windows & Linux):
+
+3ds, 7zip, aac, abl, abr, accesskeys, ace, admin, aemod, afm, afp, afpa, afpa.code, aif, aiml, 
+allrecentchanges, alz, amr, ani, ans, apng, application, apw, as, asa, asc, asf, asm, asp, aspx, 
+asx, attach, au, au3, audiences, authuser, autopackage, auto-replace, availableactions, avi, avs, bab, 
+backupandrestore, bak, banned, basicediting, basicvariables, bat, bb, bb0, bib, bin, blend, 
+blocklist-chongqed, blocklist-moinmaster, blog, bmp, bsp, btr, c, cab, cat, categories, cct, cd4, 
+cdr, cer, cfc, cfg, cfm, cgi, changelog, changesfrompmwiki1, chm, cir, ckt, clarified, class, cnf, 
+com, command, conditionalmarkup, conf, contributors, control, crc, creatingnewpages, crt, cs, cs_, 
+css, cst, csv, ctg, ctg.z, ctm, ctp, cts, cur, customintermap, custommarkup, customwikistyles, 
+cvsignore, d, dar, dat, data, db, dbf, dbt, dcr, debugvariables, def, deletingpages, dependency, 
+designnotes, dhp, dic, dict, diff, dir, dist, diz, djvu, dll, dlog, dmg, doc, documentationindex, 
+docx, dotproject, ds, ds_store, dta, dtb, dtd, dvi, dwt, ebp, editvariables, emf, emz, engine, eot, 
+eps, es, example, exe, faq, fcgi, fdb, filepermissions, fjpg, fla, flac, flock, flp, flv, fmp, fmtpagename, 
+fog, fon, fre, frm, fun, functions, gb, gba, gbc, gbs, gdf, ged, gif, gif2, glossary, gp3, gp4, gp5, 
+gpf, gr1, grd, grf, groupheader, groupheaders, grz, gtp, gz, hdr, help, helporder, hl, hlp, homepage, hst, 
+ht, ht_, htaccess, htalock, htc, htm, html, htpasswd, i18nvariables, ical, ico, ics, idx, ihtml, 
+images, ims, imstore, in, inc, inc.php, includeotherpages, inf, info, ini, initialsetuptasks, 
+install, installation, intel, intermap, internationalizations, ips, ivu, jad, jap, jar, java, jbf, 
+jhtml, jnlp, jp1, jp2, jpe, jpeg, jpg, js, js_, jso, jsp, kar, kml, kmz, lang, lasso, lastmod, 
+layoutvariables, lbi, lck, lib, lib.php, lin, links, linkvariables, list, lng, localcustomizations, 
+lock, log, lpk, lst, m3u, m4a, m4v, magic, mailinglists, mailposts, manual, map, markupmasterindex, 
+master, max, mbs, md5, mdb, mdl, mdu, me, mgc, mgl, mgx, mht, mid, midi, minipsf, mis, ml, mli, mll, 
+mly, mm, mng, mo, mod, module, mp3, mpg, msg, msi, mtl, mus, mwdeck, myd, myi, mysql, new, nfo, nfs, obj, 
+odb, odf, odg, odm, odp, ods, odt, ogg, opml, org, otg, oth, otp, ots, ott, outbox, p, p3p, paf, page, 
+pageindex, pak, params, part, pas, pat, pcd, pdd, pdf, pdn, pem, pgn, pgsql, pgt, php, php.new, php~, 
+php3, php4, php5, php-dist, phps, php-template, phpx, phtml, pk2, pk3, pl, pls, plsc, plt, pm, pmwiki, 
+png, png0, png32, po, pot, pps, ppt, prd, prefs, prf, profile, project, prop, properties, psd, psf, psf2, 
+psp, pstpl, pws, py, qt, ram, rar, rating, raw, rb, rbs, rcm, rdf, rds, recentchanges, ref, reg, res, resx, rgz, 
+rhtml, rlog, rls, rm, rpm, rss, rtf, run, sample, sav, sbm, sbn, sbx, sc, sc0, scar, scc, schema, scm, 
+scp, scs, scx, semaphore, semaphore.ref, ser, set, settings, sfg, sh, shn, shp, shtm, shtml, shx, sib, 
+sidebar, sis, sit, sitemap, sitx, sln, snp, so, spc, spec, spr, sql, src, srd, ssi, stc, std, sti, stm, 
+stw, style, sub, svg, svnignore, swc, swf, swi, sxc, sxd, sxg, sxi, sxm, sxw, t, tab, table, 
+tar, tar.bz2, tar.gz, tbl, temp, template, tex, tga, tgz, theme, thtml, thtmlx, tif, tiff, tig, tmp, tmpl, 
+toc.hlp, totals, tpl, tpls, tps, tsk, ttf, ttl, txt, types, user, usr, vars, vb, vbproj, version, vsd, w4m, 
+wad, wav, wikisandbox, win, wings, wht, whtml, wma, wmf, wmv, wml, wpb, wpd, wpe, wpp, wsf, wss, wsz, xcf, xd, xhtml, 
+xls, xlsm, xmb, xml, xpi, xsd, xsl, xslt, xspf, xt, xul, xxx, yml, z, zip
+

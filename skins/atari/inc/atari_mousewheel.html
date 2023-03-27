@@ -1,0 +1,45 @@
+<html><head>
+
+    <title>Mouse wheel programming in JavaScript -- plain JavaScript code</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="author" content="Adomas Paltanavicius">
+	<meta name="keywords" content="javascript, mouse wheel, event, capturing, programming, onmousewheel, mouse scroll, handling">
+	<meta name="description" content="Detailed guide to programming mouse wheel event handlers that work on three major browsers.">
+	<style type="text/css">
+	@import url("/style.css");
+	</style>
+</head><body><p><strong>Plain version of JavaScript code for mouse wheel handling</strong> &bull; <a href="http://adomas.org/javascript-mouse-wheel/index.html">go back</a></p>
+<pre>/** This is high-level function; REPLACE IT WITH YOUR CODE.
+ * It must react to delta being more/less than zero.
+ */
+function handle(delta) {
+	if (delta &lt; 0)
+		/* something. */;
+	else
+		/* something. */;
+}
+
+function wheel(event){
+	var delta = 0;
+	if (!event) event = window.event;
+	if (event.wheelDelta) {
+		delta = event.wheelDelta/120; 
+		if (window.opera) delta = -delta;
+	} else if (event.detail) {
+		delta = -event.detail/3;
+	}
+	if (delta)
+		handle(delta);
+        if (event.preventDefault)
+                event.preventDefault();
+        event.returnValue = false;
+}
+
+/* Initialization code. */
+if (window.addEventListener)
+	window.addEventListener('DOMMouseScroll', wheel, false);
+	window.addEventListener('mousewheel', wheel, false); // Chrome
+window.onmousewheel = document.onmousewheel = wheel;
+</pre>
+<img id="oImage" src="PL0.jpg" onmousewheel="wheel(event);">
+</body></html>

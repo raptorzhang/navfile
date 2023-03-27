@@ -1,0 +1,37 @@
+/*
+ * DevEdit (CodePress) color styles for PHP, JavaScript, HTML & CSS syntax highlighting (based on Linux Kate/KWrite)
+ */
+
+/* HTML */
+b {color:#000080;} /* tags */
+ins, ins b, ins s, ins em {color:gray;} /* comments */
+s, s b {color:#7777e4;} /* attribute values */
+a {color:green;} /* links */
+u {color:#E67300;} /* forms */
+big {color:#db0000;} /* images */
+em, em b {color:magenta;} /* style  #800080 */
+strong {color:#800000;} /* script  #800000 */
+tt i {color:darkblue;font-weight:bold;} /* script reserved words */
+
+/* CSS */
+b, b a, b u {color:#FF00CC;} /* tags, ids, classes */
+i, i b, i s, i a, i u {color:gray;} /* comments */
+s, s b {color:#006600;} /* parameters */
+a {color:#000066;} /* keys */
+u {color:#0000ff;} /* values */
+
+/* JavaScript */
+b {color:#7F0055;font-weight:bold;} /* reserved words */
+u {color:darkblue;font-weight:bold;} /* special words */
+i, i b, i s, i u {color:green;font-weight:normal;} /* comments */
+s, s b, s u {color:#2A00FF;font-weight:normal;} /* strings */
+
+/* PHP */
+b {color:#000080;} /* tags  #000080  */
+big, big b, big em, big ins, big s, strong i, strong i b, strong i s, strong i u, strong i a, strong i a u, strong i s u {color:gray;font-weight:normal;} /* comments #FF9900 */
+s, s b, strong s u, strong s cite {color:#990000;font-weight:normal;} /* attributes and strings  #5656fa */
+strong a, strong a u {color:#000000;font-weight:bold;} /* variables  #006700 */
+em {color:magenta;font-style:normal;} /* style  #800080 */
+ins {color:#800000;} /* script   #800000 */
+strong u {color:#006700;font-weight:bold;} /* reserved words  #7F0055*/
+cite, s cite {color:red;font-weight:bold;} /* <?php and ?> */

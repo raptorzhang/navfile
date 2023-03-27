@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>new html file</title>
+<meta name="Generator" value="PHP Navigator Prototype v4.12.30" />
+<meta name="Website" value="http://php.isource.net.nz/" />
+<meta name="Original" value="http://navphp.sourceforge.net/" />
+<!--[if lte IE 6]>
+<link rel=stylesheet type=text/css href="inc/pngfix.css" />
+<![endif]-->
+<link rel=icon href="./favicon.png" type=image/x-icon />
+<link href="inc/some.css" rel=stylesheet type=text/css />
+<style>
+body {
+  margin:0px;
+  padding:0px;
+}
+</style>
+<script src=inc/some.js type=text/javascript ></script>
+<script language=javascript>
+
+</script>
+</head>
+<body>
+blank html
+</body>
+</html>
